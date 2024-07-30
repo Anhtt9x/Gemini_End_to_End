@@ -12,8 +12,8 @@ SECTION VARCHAR(25));
 cursor.execute(table_info)
 
 cursor.execute('''Insert Into STUDENT values ('TANH', 'ENGEERNING', 'A')''')
-cursor.execute('''Insert Into STUDENT values ('DUNG', 'ENGEERNING', 'B')''')
-cursor.execute('''Insert Into STUDENT values ('TOAN', 'ENGEERNING', 'C')''')
+cursor.execute('''Insert Into STUDENT values ('DUNG', 'Data Science', 'B')''')
+cursor.execute('''Insert Into STUDENT values ('TOAN', 'Data Science', 'C')''')
 cursor.execute('''Insert Into STUDENT values ('HUYEN', 'ENGEERNING', 'D')''')
 
 
@@ -22,5 +22,9 @@ data = cursor.execute('''Select * from STUDENT''')
 
 for row in data:
     print(row)
+
+
+connection.commit()
+connection.close()
 
     
